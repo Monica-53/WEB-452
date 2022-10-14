@@ -28,16 +28,16 @@ namespace PillowFactory
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<PillowContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("PillowContext")));
+            //services.AddDbContext<PillowContext>(options =>
+            //    options.UseSqlServer(
+            //        Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddDbContext<PillowFactoryContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("PillowFactoryContext")));
-            //services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                //.AddEntityFrameworkStores<ApplicationDbContext>();
-            //services.AddControllersWithViews();
-           // services.AddRazorPages();
+            services.AddDbContext<PillowContext>(options =>
+                   options.UseSqlServer(Configuration.GetConnectionString("PillowContext")));
+           services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+              .AddEntityFrameworkStores<ApplicationDbContext>();
+       
+          services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

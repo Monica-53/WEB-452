@@ -20,3 +20,10 @@ Program is run to see the changes on the browser
 Welcome.cshtml is created on Views/HelloWorld
 Code written on it and output is checked on the browser.
 so far so good, Hope I will continue without any errors.
+
+22-10-14 1344
+Damn it!
+Issue when update-database
+Unable to create an object of type 'PillowContext'. For the different patterns supported at design time, see https://go.microsoft.com/fwlink/?linkid=851728
+
+An error occurred while accessing the Microsoft.Extensions.Hosting services. Continuing without the application service provider. Error: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: Microsoft.AspNetCore.Identity.IUserClaimsPrincipalFactory`1[Microsoft.AspNetCore.Identity.IdentityUser]

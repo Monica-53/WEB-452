@@ -16,7 +16,7 @@ namespace PillowFactory.Data
         {
         }
 
-        public DbSet<Pillow> Movie { get; set; }
+        public DbSet<Pillow>Pillow { get; set; }
     }
 }
 
